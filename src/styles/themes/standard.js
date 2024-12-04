@@ -14,6 +14,7 @@ export const standardTheme = {
     secondWhite: '#f0f0f0',
     darkWhite:'#f4f4f4',
     green: '#61A120',
+    dimgray: '#696969',
     roadRageFont: '"Road Rage", sans-serif',
     poppinsFont: '"Poppins", sans-serif',
 };
