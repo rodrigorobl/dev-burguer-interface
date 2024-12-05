@@ -5,3 +5,4 @@ export * from './Register';
 export * from './login';
 export * from './Checkout';
 export * from './CompletePayment';
+export * from './Admin';
