@@ -1,7 +1,21 @@
 import { Outlet, Navigate } from "react-router-dom";
 
-export function AdminLayout() {
-    const { admin: isAdmin } = JSON.parse(localStorage.getItem ('devburger:userData'));
+import { SideNavAdmin } from "../../components";
+import { Container } from "./styles";
 
-    return isAdmin ? <Outlet /> : <Navigate to="/login" />;
+export function AdminLayout() {
+	const { admin: isAdmin } = JSON.parse(localStorage.getItem("devburger:userData"));
+
+	return isAdmin ? (
+		<Container>
+			<SideNavAdmin />
+			<main>
+				<section>
+					<Outlet />
+				</section>
+			</main>
+		</Container>
+	) : (
+		<Navigate to="/login" />
+	);
 }
