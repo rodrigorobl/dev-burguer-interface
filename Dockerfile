@@ -5,13 +5,13 @@ WORKDIR /app
 
 # Instala dependências
 COPY package*.json ./
-RUN npm install
+RUN yarn install
 
 # Copia o restante do projeto
 COPY . .
 
 # Build da aplicação
-RUN npm run build
+RUN yarn run build
 
 # Etapa 2: servidor
 FROM nginx:alpine
